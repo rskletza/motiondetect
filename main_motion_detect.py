@@ -13,6 +13,6 @@ if __name__ == "__main__":
 
     #loops through the input images and sequentially calculates the motion between each pair 
     for i in range(len(frames)-1):
-        vectors = bmd.block_motion_detection(frames[i], frames[i+1], 16, 15)
+        vectors = bmd.block_motion_detection(frames[i], frames[i+1], 16, 15, bmd.sq_diff)
         motion_vectors.append(vectors)
 
